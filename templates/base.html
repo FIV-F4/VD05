@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{caption}}
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">VD05</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    {% if menu == 1 %}
+                    <a class="nav-link active" href="/home">Главная</a>
+                    {% else %}
+                    <a class="nav-link" href="/home">Главная</a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    {% if menu == 2 %}
+                    <a class="nav-link active" href="/about">О еде</a>
+                    {% else %}
+                    <a class="nav-link" href="/about">О еде</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Контактная информация</h5>
+                    <p>
+                        Адрес: 1234 Название улицы, Город, Страна<br>
+                        Телефон: (812) 456-7890<br>
+                        Email: info@mail.ru
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Следите за нами</h5>
+                    <a href="#" class="btn btn-primary btn-sm mr-1">Facebook</a>
+                    <a href="#" class="btn btn-primary btn-sm mr-1">Twitter</a>
+                    <a href="#" class="btn btn-primary btn-sm mr-1">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
